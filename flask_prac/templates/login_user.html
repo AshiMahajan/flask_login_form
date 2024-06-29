@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}User Login{% endblock %} {% block
+content %} {% if session['username'] %}
+<div class="session_for_login_user">
+  <h1 id="login_session">Hello {{ session['username'] }}</h1>
+  <div class="login_user">
+    <div id="flash_msg_login">
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for
+      message in messages %} {{ message }} {% endfor %} {% endif %} {% endwith
+      %}
+    </div>
+    <button type="button" onclick="window.location.href='/reset_password'">
+      Reset Password
+    </button>
+    <button type="button" onclick="window.location.href='/logout'">
+      Logout
+    </button>
+
+    <a href="/login"> Back </a>
+  </div>
+</div>
+{% else %}
+<h1
+  id="login_first"
+  style="
+    font-family: 'Arial', sans-serif;
+    background-color: #e5e0e0c0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  "
+>
+  Welcome! Please <a href="/login">Login</a> first
+</h1>
+{% endif %} {% endblock %}

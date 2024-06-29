@@ -1,0 +1,7 @@
+{% extends "forgot_password.html" %} {% block form %}
+<span id="flash_msg_forgot_success">
+  {% with messages = get_flashed_messages() %} {% if messages %} {% for message
+  in messages %} {{ message }} {% endfor %} {% endif %} {% endwith %}
+</span>
+{% endblock %}
+<a href="/login"> Back </a>

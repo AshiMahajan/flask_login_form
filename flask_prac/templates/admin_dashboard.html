@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Admin Dashboard{% endblock %} {%
+block content %}
+<div class="dashboard_body">
+  <div class="dashboard">
+    <h1 id="admin_dash">Admin Dashboard</h1>
+    <table style="border-spacing: 20px">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Option</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for username, info in user_data.items() %}
+        <tr>
+          <td>{{ username }}</td>
+          <td>{{ info.email }}</td>
+          <td>{{ info.password }}</td>
+          <td>{{ info.option }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% block form %}{% endblock %} {% if session['username'] %}
+    <button
+      type="button"
+      id="logout_button"
+      onclick="window.location.href='/logout'"
+    >
+      Logout
+    </button>
+    {% endif %}
+  </div>
+</div>
+<a href="/login_admin"> Back </a>
+{% endblock %}

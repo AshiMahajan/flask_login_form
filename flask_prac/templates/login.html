@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+%}
+<form action="/login" method="post" class="login_form">
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" required /><br />
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required /><br />
+  <button type="submit">Login</button>
+  <p id="flash_msg_login">
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for
+    message in messages %} {{ message }} {% endfor %} {% endif %} {% endwith %}
+  </p>
+  <button type="button" onclick="window.location.href='/forgot_password'">
+    Forgot Password
+  </button>
+</form>
+<a href="/signup"> Back </a>
+{% endblock %}

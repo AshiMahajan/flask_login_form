@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}Signup{% endblock %} {% block content
+%}
+<form action="/signup" method="post" class="sign_up">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required /><br />
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required /><br />
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required /><br />
+  <p id="flash_msg_signup">
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for
+    message in messages %} {{ message }} {% endfor %} {% endif %} {% endwith %}
+  </p>
+  <label for="email">Define your role:</label>
+  <div id="input_role">
+    <input type="radio" name="options" id="option1" value="admin" required />
+    Admin
+    <input type="radio" name="options" id="option2" value="user" required />
+    User
+  </div>
+  <button type="submit" id="button_signup">Signup</button>
+</form>
+<a href="/"> Back </a>
+{% endblock %}

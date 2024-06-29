@@ -1,0 +1,414 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e5e0e0c0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.dashboard_body{
+    font-family: 'Arial', sans-serif;
+    background-color: #e5e0e0c0;
+    margin: 0;
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-image: linear-gradient(220deg, #676767, #ffffff);
+    transition: transform 0.3s;
+}
+.container:hover{
+    transform: scale(1.06);
+    transition: transform 0.5s;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-image {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 55%;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+img{
+    width: 28px;
+    cursor: none;
+}
+.button-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.sign_up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 22%;
+}
+
+.sign_up input[type="text"], .sign_up input[type="password"], .sign_up input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.sign_up label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+#input_role{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 16px;
+    color: #555;
+    gap: 10px;
+}
+
+#button_signup{
+    width: 100%;
+}
+
+.login_form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* width: 24%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.login_form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.login_form input[type="text"], .login_form input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login_form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login_form button:hover {
+    background-color: #e68900;
+}
+
+.login_form button[type="button"] {
+    margin-top: 10px;
+    background-color: #757575;
+}
+
+.login_form button[type="button"]:hover {
+    background-color: #616161;
+}
+
+.forgot_password{
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.forgot_password label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.forgot_password input[type="text"], .forgot_password input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.forgot_password button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.forgot_password button:hover {
+    background-color: #e68900;
+}
+
+.forgot_password button[type="button"] {
+    margin-top: 10px;
+    background-color: #757575;
+}
+
+.forgot_password button[type="button"]:hover {
+    background-color: #616161;
+}
+
+.reset_password{
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reset_password label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.reset_password input[type="text"], .reset_password input[type="password"], .reset_password input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.reset_password button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.reset_password button:hover {
+    background-color: #e68900;
+}
+
+.reset_password button[type="button"] {
+    margin-top: 10px;
+    background-color: #757575;
+}
+
+/* FLASH MESSAGES SIGNUP */
+#flash_msg_signup{
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(40, 255, 32);
+    display: flex;
+    position: relative;
+    margin-top: -30px;
+    text-transform: capitalize;
+}
+
+/* FLASH MESSAGES LOGIN */
+#flash_msg_login{
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(244, 199, 0);
+    display: contents;
+    text-align: center;
+    text-transform: capitalize;
+    flex-direction: column;
+}
+#Login_href{
+    margin-left: 7px;
+    margin-right: 7px;
+}
+#Login_href:link {
+  color: green;
+  text-decoration: none;
+}
+
+/* FLASH MESSAGES FORGOT SUCCESS */
+#flash_msg_forgot_success{
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(26, 189, 11);
+    display: ruby-text;
+    text-transform: capitalize;
+}
+
+/* RESET PASSWORD */
+#reset_msg{
+    font-size: 15px;
+    color: rgb(0, 255, 13);
+    text-transform: capitalize;
+    font-style: oblique;
+}
+/* BACK CSS */
+#back_signup{
+    width: 45px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    transition: transform 0.3s;
+}
+#back_signup:hover{
+    width: 45px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    transform: scale(1.06);
+    transition: transform 0.5s;
+}
+
+.login_user{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.login_admin{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: double;
+}
+#admin_dash{
+    text-decoration-line: underline;
+    text-decoration-color: rgb(164, 164, 164);
+}
+#login_session{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+.session_for_login_user{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.session_for_login_admin{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+#login_first{
+    font-family: 'Arial', sans-serif;
+    background-color: #e5e0e0c0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#logout_button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #616161;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 35%;
+}
+#home_button{
+    width: 50%;
+    margin-top: 10px;
+}
+
+.logout_home_button{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}

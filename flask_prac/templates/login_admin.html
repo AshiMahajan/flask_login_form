@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% block title %}Admin Login{% endblock %} {% block
+content %} {% if session['username'] and session['user_option'] == 'admin' %}
+<div class="session_for_login_admin">
+  <h1 id="login_session">Hello {{ session['username'] }}</h1>
+  <div class="login_admin">
+    <div id="flash_msg_login">
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for
+      message in messages %} {{ message }} {% endfor %} {% endif %} {% endwith
+      %}
+    </div>
+    <button type="button" onclick="window.location.href='/reset_password'">
+      Reset Password
+    </button>
+    <button type="button" onclick="window.location.href='/logout'">
+      Logout
+    </button>
+    <div style="text-align: center; margin-top: 15px">
+      <a
+        href="/admin/dashboard"
+        class="alert-link"
+        id="Login_href"
+        style="text-decoration: underline; color: rgb(0 67 255)"
+        >Dashboard</a
+      >
+
+      <a href="/login"> Back </a>
+    </div>
+  </div>
+</div>
+{% else %}
+<h1
+  id="login_first"
+  style="
+    font-family: 'Arial', sans-serif;
+    background-color: #e5e0e0c0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  "
+>
+  Welcome! Please <a href="/login">Login</a> first
+</h1>
+{% endif %} {% endblock %}
